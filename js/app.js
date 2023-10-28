@@ -15,9 +15,9 @@ function theSum(num1, num2) {
   return [total, message];
 }
 
-// Example usage:
-const resultArray = theSum(4, 7);
-console.log(resultArray[0]); // Output: 11
+// // Example usage:
+// const resultArray = theSum(4, 7);
+// console.log(resultArray[0]); // Output: 11
 
 
 // Here is the test for theSum(); uncomment it to run it
@@ -34,9 +34,18 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { //eslint-disable-line
 
+function multiply(num1, num2) {
+  const total = num1 * num2;
+  const message = `The product of ${num1} and ${num2} is ${total}.`;
+  return [total, message];
 }
+
+// // Example usage:
+// const totalArray = multiply(5, 9);
+// console.log(totalArray[0]); // Output: 45
+// console.log(totalArray[1]); // Output: "The product of 5 and 9 is 45."
+
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
@@ -55,12 +64,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
+function sumAndMultiply(num1, num2, num3) { //eslint-disable-line
 
+  const sumResult = theSum(num1, num2, num3);
+  const productResult = multiply(num1, num2, num3);
+  const sumMessage = `${num1} and ${num2} and ${num3} sum to ${sumResult}.`;
+  const productMessage = `The product of ${num1} and ${num2} and ${num3} is ${productResult}.`;
+
+  return [sumResult, productResult, sumMessage, productMessage];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+console.log(sumAndMultiply(4,7,5));
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
