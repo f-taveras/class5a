@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 // /* Problem 1 (this is your demo that we'll solve in class)
 // Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and uses the values that were input into the function:
@@ -119,12 +119,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
+function multiplyArray(numbers) {
+  let productResult = 1; // Initialize the result as 1.
+  for (let i = 0; i < numbers.length; i++) {
+    productResult = multiply(productResult, numbers[i]);
+    const numbersAsString = numbers.join(",");
+    const message = `The numbers ${numbersAsString} have a product of ${productResult}.`;
 
-}
-
+    return [productResult, message];
+  }
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+}
+multiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
