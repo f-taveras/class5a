@@ -14,14 +14,13 @@ function theSum(num1, num2) {
   const message = `The sum of ${num1} and ${num2} is ${total}.`;
   return [total, message];
 }
+console.log(theSum(4, 7));
 
-// // Example usage:
-// const resultArray = theSum(4, 7);
-// console.log(resultArray[0]); // Output: 11
+
 
 
 // Here is the test for theSum(); uncomment it to run it
-theSum(4, 7);
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -34,7 +33,6 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-
 function multiply(num1, num2) {
   const total = num1 * num2;
   const message = `The product of ${num1} and ${num2} is ${total}.`;
@@ -48,7 +46,7 @@ function multiply(num1, num2) {
 
 
 // Here is the test for multiply(); uncomment it to run it
-multiply(5,9);
+console.log(multiply(8,8));
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -59,12 +57,12 @@ Write a function called sumAndMultiply() that takes in three numbers as separate
 Third element: "4 and 7 and 5 sum to 16."
 Fourth element: "The product of 4 and 7 and 5 is 140."
 
-IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. To do addition, use your sum() function, and to do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
+IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this function. To do theSum, use your sum() function, and to do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(num1, num2, num3) { //eslint-disable-line
+function sumAndMultiply(num1, num2, num3) { 
 
   const sumResult = theSum(num1, num2, num3);
   const productResult = multiply(num1, num2, num3);
@@ -91,10 +89,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 
-let testArray = [2, 3, 4]; //eslint-disable-line
+let testArray = [2, 3, 4];
 function sumArray(testArray) {
-  const sumResult = theSum(testArray);
-  const numbersAsString = testArray.join(",");
+  const sumResult = testArray[0] + testArray[1] + testArray[2];
+  const numbersAsString = testArray.join(',');
   const message = numbersAsString + ' was passed in as an array of numbers, and ' + sumResult + ' is their sum.';
   return [sumResult, message];
 }
@@ -132,6 +130,8 @@ function multiplyArray(numbers) {
 }
 multiplyArray(testArray);
 
+// console.log(multiplyArray(testArray));
+
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
@@ -151,11 +151,13 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
+// let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) { //eslint-disable-line
+// function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
-}
+// }
+
+// testDynamicArray();
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
