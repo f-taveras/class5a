@@ -39,10 +39,6 @@ function multiply(num1, num2) {
   return [total, message];
 }
 
-// // Example usage:
-// const totalArray = multiply(5, 9);
-// console.log(totalArray[0]); // Output: 45
-// console.log(totalArray[1]); // Output: "The product of 5 and 9 is 45."
 
 
 // Here is the test for multiply(); uncomment it to run it
@@ -118,19 +114,24 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(numbers) {
-  let productResult = 1; // Initialize the result as 1.
+  function multiply(a, b) {
+    return a * b;
+  }
+
+  let productResult = 1; 
   for (let i = 0; i < numbers.length; i++) {
     productResult = multiply(productResult, numbers[i]);
-    const numbersAsString = numbers.join(",");
-    const message = `The numbers ${numbersAsString} have a product of ${productResult}.`;
-
-    return [productResult, message];
   }
-// Here is the test for multiplyArray(); uncomment it to run it
+
+  const numbersAsString = numbers.join(",");
+  const message = `The numbers ${numbersAsString} have a product of ${productResult}.`;
+
+  console.log(message); 
 }
+
 multiplyArray(testArray);
 
-// console.log(multiplyArray(testArray));
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
